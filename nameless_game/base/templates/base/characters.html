@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+
+<div id="content_container">
+    <div id="content_wrapper">
+        {% for character in characters.all %}
+            <li><a href="{% url 'base:detail character' character.id %}">{{ character }}</a></li>
+        {% endfor %}
+    </div>
+</div>

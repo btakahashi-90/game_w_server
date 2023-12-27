@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+
+<div id="content_container">
+    <div id="content_wrapper">
+        {% for mob in mobs.all %}
+            <li><a href="{% url 'base:detail mob' mob.id %}">{{ mob }}</a></li>
+        {% endfor %}
+    </div>
+</div>
