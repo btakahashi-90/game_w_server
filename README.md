@@ -22,6 +22,19 @@ This should offload some of the work from the "client" should this ever go live 
   - Anyone building this project on their own should also build their own migrations for database and system consistency.
 
 # MAJOR CHANGE LOG
+### 1/2/2024
+- added mob editing and mob creation form/urls/etc.
+  - used "custom" form for this, might try a django form for something else for fun
+  - Name must be unique, case INSENSITIVE (mob and MOB are two different objects)
+  - There is no built in delete yet, you can delete from /admin or directly with DB Management API/Software
+  - Name is the only REQUIRED field, values will be defaulted for all others if left blank
+  - Editing a mob and blanking a field will also default the field, please be careful
+- updated mob "details" page to include currently available stats
+- reduced data from server for mobs to necessary info for game
+- makemigrations
+  - minor mob data update (damage reduction, made "name" unique)
+- migrate
+
 ### 1/1/2024
 - added game.html and link at /base
 - extracted js/css to separate files, small modification to base.css

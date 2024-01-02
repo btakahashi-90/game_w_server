@@ -1,1 +1,12 @@
-{{ mob }}
+{% load static %}
+<link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+
+<div id="content_container">
+    <div id="content_wrapper">
+        {{ mob }}
+        {{ mob.stats }}
+        {% for stat, value in mob.stats.items %}
+        <p>{{ stat }}: {{ value }}</p>
+        {% endfor %}
+    </div>
+</div>

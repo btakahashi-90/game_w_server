@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+<link rel="stylesheet" href="{% static 'base/css/form.css' %}">
+
+<div id="content_container">
+    <div id="content_wrapper">
+        Edit {{ mob.name }}
+        <div style="color:red;">{{ message }}</div>
+        <form action="/base/mobs/edit/{{mob.id}}/" method="post">
+            {% csrf_token %}
+            <div class="form_field">Name: <input name="name" type="text" required placeholder="name" {% if mob.id != 'new'%}value='{{ mob.name }}'{% endif %}></div>
+            <div class="form_field">HP: <input name="hp" type="number" step="1" placeholder="1" {% if mob.id != 'new' %}value='{{ mob.hp }}'{% endif %}></div>
+            <div class="form_field">Damage: <input name="damage" type="number" step="1" placeholder="1" {% if mob.id != 'new' %}value='{{ mob.damage }}'{% endif %}></div>
+            <div class="form_field">Damage Modifier: <input name="dmod" type="number" step="1" placeholder="0" {% if mob.id != 'new' %}value='{{ mob.damage_mod }}'{% endif %}></div>
+            <div class="form_field">Damage Reduction: <input name="dr" type="number" step="1" placeholder="0" {% if mob.id != 'new' %}value='{{ mob.damage_reduction }}'{% endif %}></div>
+            <div><input type="submit" value="Submit"></div>
+        </form>
+    </div>
+</div>

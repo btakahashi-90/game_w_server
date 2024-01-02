@@ -3,8 +3,10 @@
 
 <div id="content_container">
     <div id="content_wrapper">
+        <button><a href="{% url 'base:mob edit' 'new' %}">New</a></button>
+        <br><br><br>
         {% for mob in mobs.all %}
-            <li><a href="{% url 'base:detail mob' mob.id %}">{{ mob }}</a></li>
+            <li>{{ mob }}&nbsp;&nbsp;<button><a href="{% url 'base:detail mob' mob.id %}">View</a></button>&nbsp;&nbsp;<button><a href="{% url 'base:mob edit' mob.id %}">Edit</a></li>
         {% endfor %}
     </div>
 </div>
