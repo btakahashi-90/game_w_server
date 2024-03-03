@@ -28,7 +28,7 @@ This should offload some of the work from the "client" should this ever go live 
 - Add react application (react_frontend) to the project
   - installed django rest framework, django cors headers, and axios for integration
   - include the new apps and middleware in your settings.py file
-- Created first "Hello World" react page (defaultulr:3000/hello-world)
+- Created first "Hello World" react page (defaultulr:3000)
 - Planning for reorganizing the entire game into a react app has started, to be updated as implementation and testing proceeds
   - This is likely to be a full overhaul and not a step-by-step update, but we'll see
 - Django will do all of the routing, will not be using react-route
