@@ -20,8 +20,23 @@ This should offload some of the work from the "client" should this ever go live 
   - Some settings are "private", i.e. database connection and password. While these are local (for now), someone may want to use something different and it'll be easier (I'm pretty sure) to instantiate your own database from the ground up.
 - migrations
   - Anyone building this project on their own should also build their own migrations for database and system consistency.
+- node_modules
+  - This directory was removed to relieve some of the overhead from the respository. Testing to be done later if it (or just some of its subdirectories) are necessary.
 
 # MAJOR CHANGE LOG
+### 3/3/2024
+- Add react application (react_frontend) to the project
+  - installed django rest framework, django cors headers, and axios for integration
+  - include the new apps and middleware in your settings.py file
+- Created first "Hello World" react page (defaultulr:3000/hello-world)
+- Planning for reorganizing the entire game into a react app has started, to be updated as implementation and testing proceeds
+  - This is likely to be a full overhaul and not a step-by-step update, but we'll see
+- Django will do all of the routing, will not be using react-route
+- Old pages (defaulturl:8000/base/*) will remain for the time being
+- To access react page(s) you will need to run both the django server and react server (python manage.py runserver and npm start in two different consoles)
+- For testing purposes, CORS can allow all access (CORS_ALLOW_ALL_ORIGINS = True), THIS SHOULD BE CHANGED FOR LIVE SERVERS FOR SECURITY PURPOSES
+- /react_frontend/src/components/playground is for testing/random components, to be removed at a later date
+
 ### 1/2/2024
 - added mob editing and mob creation form/urls/etc.
   - used "custom" form for this, might try a django form for something else for fun

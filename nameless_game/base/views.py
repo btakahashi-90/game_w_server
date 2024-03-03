@@ -37,7 +37,7 @@ def detail_character(request, character_id):
 # MOB VIEWS
 def mobs(request):
     c = {}
-    c["mobs"] = Mob.objects.all() # This should be changed to filter to exclude deleted if desired later
+    c["mobs"] = Mob.objects.all().order_by("name") # This should be changed to filter to exclude deleted if desired later
     return render(request, "base/mobs.html", c)
 
 def detail_mob(request, mob_id):
