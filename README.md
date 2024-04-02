@@ -24,6 +24,16 @@ This should offload some of the work from the "client" should this ever go live 
   - This directory was removed to relieve some of the overhead from the respository. Testing to be done later if it (or just some of its subdirectories) are necessary.
 
 # MAJOR CHANGE LOG
+### 4/1/2024 - 4/2/2024
+- Started ToDo Django application for development tracking (because why not)
+- Added more to "Hello World" playground for testing
+- Added edit/save basic structure for Todo
+- Made Todo component - should have done this at the beginning...
+- Created/tested API for saving changes to Todos to server
+  - Review comments in code, needs some work still (A "todo" in the "todo" api)
+- We ARE using react-route because I was wrong. Go figure
+- My apologies if I missed any changes. It's been a crazy month
+
 ### 3/3/2024
 - Add react application (react_frontend) to the project
   - installed django rest framework, django cors headers, and axios for integration

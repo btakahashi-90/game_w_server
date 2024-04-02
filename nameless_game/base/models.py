@@ -29,7 +29,7 @@ class Mob(models.Model):
         return self.name
     
     def stats(self):
-        return ({"hp": self.hp, "damage": self.damage, "damage_mod": self.damage_mod, "damage_reduction": self.damage_reduction}) # return stats as a dictionary
+        return ({"name": self.name, "hp": self.hp, "damage": self.damage, "damage_mod": self.damage_mod, "damage_reduction": self.damage_reduction}) # return stats as a dictionary
     
 # class Skill(models.Model):
 #     # should spells be separate?
